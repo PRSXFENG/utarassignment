@@ -1,13 +1,15 @@
 run = True
+
+
 def mainloop():
-    print ("-"*64)
-    print ("Welcome to the Test Management System")
-    print ("-"*64)
-    print ("Please pick an option: ")
-    print ("[1] Setup")
-    print ("[2] Generate Test Paper")
-    print ("[3] Help")
-    print ("\n[E] Exit")
+    print("-" * 64)
+    print("Welcome to the Test Management System")
+    print("-" * 64)
+    print("Please pick an option: ")
+    print("[1] Setup")
+    print("[2] Generate Test Paper")
+    print("[3] Help")
+    print("\n[E] Exit")
     select = input()
 
     if select == "1":
@@ -20,22 +22,23 @@ def mainloop():
         helpmenu()
 
     elif select == "E" or select == "e":
-        print ("Goodbye")
+        print("Goodbye")
         exit()
 
     else:
-        print ("Error: Invalid Input\nPlease Try Again.")
+        print("Error: Invalid Input\nPlease Try Again.")
+
 
 def setupmenu():
-    print ("-"*64)
-    print ("Setup Menu")
-    print ("-"*64)
-    print ("Please pick an option: ")
-    print ("[1] Student Menu")
-    print ("[2] Courses Menu")
-    print ("[3] Question Banks")
-    print ("[4] Test Dates")
-    print ("\n[E] Exit")
+    print("-" * 64)
+    print("Setup Menu")
+    print("-" * 64)
+    print("Please pick an option: ")
+    print("[1] Student Menu")
+    print("[2] Courses Menu")
+    print("[3] Question Banks")
+    print("[4] Test Dates")
+    print("\n[E] Exit")
     select2 = input()
 
     if select2 == "1":
@@ -52,36 +55,44 @@ def setupmenu():
 
     elif select2 == "E" or select2 == "e":
         mainloop()
-    
+
     else:
-        print ("Error: Invalid Input\nPlease Try Again.")
+        print("Error: Invalid Input\nPlease Try Again.")
+
 
 def testpaper():
-    print ("-"*64)
-    print ("Generate Student Test Paper")
-    print ("there is supposed to be a list of courses here from another menu but for now it will just be this line of text")
+    print("-" * 64)
+    print("Generate Student Test Paper")
+    print(
+        "there is supposed to be a list of courses here from another menu but for now it will just be this line of text")
     courseid = input("Enter Course ID or E to Exit: ")
 
     if courseid == "E" or "e":
         mainloop()
 
     else:
-        print ("itll do something")
+        print("itll do something")
+
 
 def helpmenu():
-    print ("todo")
+    print("todo")
+
 
 def studentmenu():
-    print ("todo")
+    print("todo")
+
 
 def coursemenu():
-    print ("todo")
+    print("todo")
+
 
 def questionbank():
-    print ("todo")
+    print("todo")
+
 
 def testdate():
-    print ("todo")
+    print("todo")
+
 
 while run:
     mainloop()
