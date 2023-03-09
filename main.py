@@ -57,7 +57,16 @@ def setupmenu():
         print ("Error: Invalid Input\nPlease Try Again.")
 
 def testpaper():
-    print ("todo")
+    print ("-"*64)
+    print ("Generate Student Test Paper")
+    print ("there is supposed to be a list of courses here from another menu but for now it will just be this line of text")
+    courseid = input("Enter Course ID or E to Exit: ")
+
+    if courseid == "E" or "e":
+        mainloop()
+
+    else:
+        print ("itll do something")
 
 def helpmenu():
     print ("todo")
