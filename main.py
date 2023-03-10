@@ -22,7 +22,7 @@ def mainloop():
     elif select == "3":
         helpmenu()
 
-    elif select == "E" or select == "e":
+    elif select.upper() == "E":
         print("Goodbye")
         exit()
 
@@ -55,7 +55,7 @@ def setupmenu():
     elif select2 == "4":
         testdate()
 
-    elif select2 == "E" or select2 == "e":
+    elif select2.upper() == "E":
         mainloop()
 
     else:
@@ -72,7 +72,7 @@ def testpaper():
     # there is supposed to be a list of courses here from another menu but for now it will just be this line of text
     courseid = input("Enter Course ID or E to Exit: ")
 
-    if courseid == "E" or "e":
+    if courseid.upper() == "E":
         mainloop()
 
     else:
@@ -117,13 +117,26 @@ def coursemenu():
     print("-" * 64)
     print("Course Maintenance Menu")
     print("-" * 64)
-    print()  # it should print a list of courses but havent done that yet
+    print(courseCode, courseDesc) #testing
     print("[A]dd [U]pdate [D]elete")
     print("[E]xit")
     select3 = input()
 
-    if select3 == "A":
+    if select3.upper() == "A":
         courseadd()
+
+    elif select3.upper() == "U":
+        courseup()
+
+    elif select3.upper() == "D":
+        coursedel()
+
+    elif select3.upper() == "E":
+        mainloop()
+
+    else:
+        print("Error: Invalid Input\nPlease Try Again.")
+        coursemenu()
 
 # setup[3]
 def questionbank():
@@ -148,11 +161,38 @@ def studentlist():
     print("-" * 64)
 
 def courseadd():
-    cc = input("Insert Course Code or C to cancel")
-    cd = input("Insert Course Description or C to cancel")
-    courseCode.append(cc)
-    courseDesc.append(cd)
-    #it will need to save to txt at some point
+    cadd = True
+    while cadd:
+        cc = input("Insert Course Code or C to cancel: ")
+        if cc.upper() == "C":
+            coursemenu()
+        cd = input("Insert Course Description or C to cancel: ")
+        if cd.upper() == "C":
+            coursemenu()
+        else:
+            courseCode.append(cc)
+            courseDesc.append(cd)
+        addmore()
+        #it will need to save to txt at some point
+
+def addmore():
+    add = input("Do you want to add more courses? (Y or N): ")
+    if add.upper() == "Y":
+        cadd = True
+    elif add.upper() == "N":
+        cadd = False
+        coursemenu()
+    else:
+        print ("Invalid Input")
+        addmore()
+
+def courseup():
+    print ("todo")
+    #need to somehow read from the list, display and allow changing it
+
+def coursedel():
+    print ("todo")
+    #i'll look into deleting from lists later
 
 courseCode = ["FHMM1034"]
 courseDesc = ["MATHEMATICS 3"]
