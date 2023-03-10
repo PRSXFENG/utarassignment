@@ -92,7 +92,24 @@ def helpmenu():
 def studentmenu():
     studentlist()
     # need to add name, add id, add nric
-    print("todo")
+    print("[A]dd [U]pdate [D]elete")
+    print("[E]xit")
+    select4 = input()
+#here want to change name adding(not change yet)
+    if select4.upper() == "A":
+        courseadd()
+
+    elif select4.upper() == "U":
+        courseup()
+
+    elif select4.upper() == "D":
+        coursedel()
+
+    elif select4.upper() == "E":
+        mainloop()
+
+    else:
+        print("Error: Invalid Input\nPlease Try Again.")
 
 
 # setup[2]
@@ -137,11 +154,11 @@ def courseadd():
     courseDesc.append(cd)
     #it will need to save to txt at some point
 
-courseCode = []
-courseDesc = []
-studId = []
-studName = []
-nric = []
+courseCode = ["FHMM1034"]
+courseDesc = ["MATHEMATICS 3"]
+studId = ["2205374"]
+studName = ["ONG YEE HONG"]
+nric = ["041008-02-0159"]
 
 while run:
     mainloop()
