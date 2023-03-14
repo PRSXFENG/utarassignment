@@ -30,7 +30,7 @@ def mainloop():
         print("Error: Invalid Input\nPlease Try Again.")
 
 
-# mainpage[1]
+#[1]setup
 def setupmenu():
     print("-" * 64)
     print("Setup Menu")
@@ -62,14 +62,13 @@ def setupmenu():
         print("Error: Invalid Input\nPlease Try Again.")
 
 
-# mainpage[2]
+#[2]Generate Test Paper
 def testpaper():
     print("-" * 64)
     print("Generate Student Test Paper")
     print("-" * 64)
 
     print(courseLst)
-    # there is supposed to be a list of courses here from another menu but for now it will just be this line of text
     courseid = input("Enter Course ID or E to Exit: ")
 
     if courseid.upper() == "E":
@@ -79,7 +78,7 @@ def testpaper():
         print("itll do something")
 
 
-# mainpage[3]
+#[3]Help Menu
 def helpmenu():
     print("-" * 64)
     print("Help Menu")
@@ -88,7 +87,7 @@ def helpmenu():
     print("todo")
 
 
-# setup[1]
+#[1]Student
 def studentmenu():
     studentlist()
     # need to add name, add id, add nric
@@ -112,7 +111,7 @@ def studentmenu():
         print("Error: Invalid Input\nPlease Try Again.")
 
 
-# setup[2]
+#[2]Courses
 def coursemenu():
     print("-" * 64)
     print("Course Maintenance Menu")
@@ -138,12 +137,12 @@ def coursemenu():
         print("Error: Invalid Input\nPlease Try Again.")
         coursemenu()
 
-# setup[3]
+#[3]Questions Bank
 def questionbank():
     print("todo")
 
 
-# setup[4]
+#[4]Test Dates
 def testdate():
     print("todo")
 
@@ -194,11 +193,13 @@ def coursedel():
     print ("todo")
     #i'll look into deleting from lists later
 
+
 courseCode = ["FHMM1034"]
 courseDesc = ["MATHEMATICS 3"]
 studId = ["2205374"]
 studName = ["ONG YEE HONG"]
 nric = ["041008-02-0159"]
+
 
 while run:
     mainloop()
