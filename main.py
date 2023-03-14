@@ -1,6 +1,5 @@
 run = True
 
-
 # mainpage
 def mainloop():
     print("-" * 64)
